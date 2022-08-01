@@ -16,3 +16,6 @@ user:
   name_max: 50
   email_max: 255
   email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  image_type: ["image/jpeg", "image/gif", "image/png"]
+  image_size: 5
+  image_resize: [500, 500]
