@@ -73,3 +73,4 @@ config/application.yml
 
 .framgia-ci-reports/
 .framgia-ci-result.temp.yml
+/log/
