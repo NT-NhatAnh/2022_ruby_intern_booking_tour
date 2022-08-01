@@ -601,3 +601,201 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 25ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 4817)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-01 09:41:23 +0700
+  
+ActiveRecord::NoDatabaseError (Unknown database 'booking_tour'):
+  
+activerecord (6.1.6.1) lib/active_record/connection_adapters/mysql2_adapter.rb:43:in `rescue in new_client'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/mysql2_adapter.rb:39:in `new_client'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `mysql2_connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.6.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.6.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.6.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.6.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.6.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.6.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.6.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.6.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.6.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.6.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.6.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.6.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.6.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.6.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.6.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.6.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.6.1) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.6.1) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (268.7ms)[0m  [1m[35mCREATE DATABASE `booking_tour` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE DATABASE `booking_tour` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (39.0ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_attachments` CASCADE[0m
+  [1m[35m (2457.1ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (86.2ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_blobs` CASCADE[0m
+  [1m[35m (4850.0ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (409.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `active_storage_variant_records` CASCADE[0m
+  [1m[35m (5777.5ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (624.8ms)[0m  [1m[35mDROP TABLE IF EXISTS `categories` CASCADE[0m
+  [1m[35m (1691.0ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (108.9ms)[0m  [1m[35mDROP TABLE IF EXISTS `discounts` CASCADE[0m
+  [1m[35m (4519.2ms)[0m  [1m[35mCREATE TABLE `discounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `discount_rate` decimal(10), `activated` tinyint(1), `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_discounts_on_tour_id` (`tour_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (66.6ms)[0m  [1m[35mDROP TABLE IF EXISTS `request_histories` CASCADE[0m
+  [1m[35m (4662.3ms)[0m  [1m[35mCREATE TABLE `request_histories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `quantity` int, `total_price` decimal(10), `status` int, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_request_histories_on_tour_id` (`tour_id`), INDEX `index_request_histories_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (243.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `reviews` CASCADE[0m
+  [1m[35m (2596.2ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rating` decimal(10), `content` text, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_reviews_on_tour_id` (`tour_id`), INDEX `index_reviews_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (130.4ms)[0m  [1m[35mDROP TABLE IF EXISTS `tour_requests` CASCADE[0m
+  [1m[35m (2183.1ms)[0m  [1m[35mCREATE TABLE `tour_requests` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `quantity` int, `total_price` decimal(10), `status` int, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_tour_requests_on_tour_id` (`tour_id`), INDEX `index_tour_requests_on_user_id` (`user_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (141.3ms)[0m  [1m[35mDROP TABLE IF EXISTS `tours` CASCADE[0m
+  [1m[35m (2337.4ms)[0m  [1m[35mCREATE TABLE `tours` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tour_name` varchar(255), `tour_description` text, `price` decimal(10), `avg_rating` decimal(10), `start_date` datetime, `end_date` datetime, `category_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_tours_on_category_id` (`category_id`)) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (155.1ms)[0m  [1m[35mDROP TABLE IF EXISTS `users` CASCADE[0m
+  [1m[35m (2395.8ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `role` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL) DEFAULT CHARSET=utf8mb3[0m
+  [1m[35m (5193.6ms)[0m  [1m[35mALTER TABLE `active_storage_attachments` ADD CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+[0m
+  [1m[35m (5762.5ms)[0m  [1m[35mALTER TABLE `active_storage_variant_records` ADD CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+[0m
+  [1m[35m (5311.7ms)[0m  [1m[35mALTER TABLE `discounts` ADD CONSTRAINT `fk_rails_18a6af482e`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+[0m
+  [1m[35m (7175.0ms)[0m  [1m[35mALTER TABLE `request_histories` ADD CONSTRAINT `fk_rails_ccfcba991d`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+[0m
+  [1m[35m (7014.5ms)[0m  [1m[35mALTER TABLE `request_histories` ADD CONSTRAINT `fk_rails_7de1b0410f`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+[0m
+  [1m[35m (6835.4ms)[0m  [1m[35mALTER TABLE `reviews` ADD CONSTRAINT `fk_rails_cbf2a12b63`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+[0m
+  [1m[35m (10660.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS `booking_tour`[0m
+  [1m[35m (156.1ms)[0m  [1m[35mCREATE DATABASE `booking_tour` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE `booking_tour` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (2807.3ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (6258.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT GET_LOCK('3936186478484133195', 0)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20220731092530)
+  [1m[35m (1005.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `email` varchar(255), `role` int, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (49.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731092530')[0m
+  [1m[36mTRANSACTION (411.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20220731093813)
+  [1m[35m (3154.4ms)[0m  [1m[35mCREATE TABLE `categories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `category_name` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731093813')[0m
+  [1m[36mTRANSACTION (228.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTours (20220731093814)
+  [1m[35m (2616.5ms)[0m  [1m[35mCREATE TABLE `tours` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `tour_name` varchar(255), `tour_description` text, `price` decimal, `avg_rating` decimal, `start_date` datetime, `end_date` datetime, `category_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_tours_on_category_id` (`category_id`), CONSTRAINT `fk_rails_138548726a`
+FOREIGN KEY (`category_id`)
+  REFERENCES `categories` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731093814')[0m
+  [1m[36mTRANSACTION (189.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTourRequests (20220731100039)
+  [1m[35m (2073.2ms)[0m  [1m[35mCREATE TABLE `tour_requests` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `quantity` int, `total_price` decimal, `status` int, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_tour_requests_on_user_id` (`user_id`), INDEX `index_tour_requests_on_tour_id` (`tour_id`), CONSTRAINT `fk_rails_9bc73f394f`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_4259d099a6`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+)[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731100039')[0m
+  [1m[36mTRANSACTION (204.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20220731100708)
+  [1m[35m (3534.5ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `rating` decimal, `content` text, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_reviews_on_user_id` (`user_id`), INDEX `index_reviews_on_tour_id` (`tour_id`), CONSTRAINT `fk_rails_74a66bd6c5`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_cbf2a12b63`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731100708')[0m
+  [1m[36mTRANSACTION (192.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateRequestHistories (20220731101702)
+  [1m[35m (3808.3ms)[0m  [1m[35mCREATE TABLE `request_histories` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `quantity` int, `total_price` decimal, `status` int, `user_id` bigint NOT NULL, `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_request_histories_on_user_id` (`user_id`), INDEX `index_request_histories_on_tour_id` (`tour_id`), CONSTRAINT `fk_rails_7de1b0410f`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+, CONSTRAINT `fk_rails_ccfcba991d`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731101702')[0m
+  [1m[36mTRANSACTION (246.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDiscounts (20220731115936)
+  [1m[35m (5829.9ms)[0m  [1m[35mCREATE TABLE `discounts` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `discount_rate` decimal, `activated` tinyint(1), `tour_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, INDEX `index_discounts_on_tour_id` (`tour_id`), CONSTRAINT `fk_rails_18a6af482e`
+FOREIGN KEY (`tour_id`)
+  REFERENCES `tours` (`id`)
+)[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731115936')[0m
+  [1m[36mTRANSACTION (777.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateActiveStorageTables (20220731140128)
+  [1m[35m (3552.3ms)[0m  [1m[35mCREATE TABLE `active_storage_blobs` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `key` varchar(255) NOT NULL, `filename` varchar(255) NOT NULL, `content_type` varchar(255), `metadata` text, `service_name` varchar(255) NOT NULL, `byte_size` bigint NOT NULL, `checksum` varchar(255) NOT NULL, `created_at` datetime NOT NULL, UNIQUE INDEX `index_active_storage_blobs_on_key` (`key`))[0m
+  [1m[35m (6246.9ms)[0m  [1m[35mCREATE TABLE `active_storage_attachments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `record_type` varchar(255) NOT NULL, `record_id` bigint NOT NULL, `blob_id` bigint NOT NULL, `created_at` datetime NOT NULL, INDEX `index_active_storage_attachments_on_blob_id` (`blob_id`), UNIQUE INDEX `index_active_storage_attachments_uniqueness` (`record_type`, `record_id`, `name`, `blob_id`), CONSTRAINT `fk_rails_c3b3935057`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[35m (4648.5ms)[0m  [1m[35mCREATE TABLE `active_storage_variant_records` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `blob_id` bigint NOT NULL, `variation_digest` varchar(255) NOT NULL, UNIQUE INDEX `index_active_storage_variant_records_uniqueness` (`blob_id`, `variation_digest`), CONSTRAINT `fk_rails_993965df05`
+FOREIGN KEY (`blob_id`)
+  REFERENCES `active_storage_blobs` (`id`)
+)[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20220731140128')[0m
+  [1m[36mTRANSACTION (184.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2022-08-01 02:44:17.337915', '2022-08-01 02:44:17.337915')[0m
+  [1m[36mTRANSACTION (240.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT RELEASE_LOCK('3936186478484133195')[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-01 09:48:48 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/yuuma/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/yuuma/.rbenv/versions/3.0.2/lib/ruby/gems/3.0.0/gems/railties-6.1.6.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 25.9ms | Allocations: 502)
+Completed 200 OK in 40ms (Views: 28.0ms | ActiveRecord: 0.0ms | Allocations: 4909)
+
+
